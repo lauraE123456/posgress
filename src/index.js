@@ -3,7 +3,7 @@ import cors from "cors"
 import morgan from "morgan"
 
 import routerProduct from "./router/router.products.js"
-
+import routerUser from "./router/router.user.js"
 const app = express()
 
 
@@ -17,6 +17,7 @@ app.use(morgan("dev"))
 app.use(cors())
 
 app.use('/api',routerProduct)
+app.use('/api',routerUser)
 
 const PORT = 8080
 
